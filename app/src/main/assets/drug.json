@@ -1,0 +1,260 @@
+[
+  {
+    "id": "ivermectin_scabies",
+    "name": "Ivermectina",
+    "indication": "Scabbia (WHO; BNF/NICE)",
+    "formulaType": "PER_KG",
+    "dosePerUnit": 200,
+    "unit": "µg",
+    "maxDose": 12,
+    "minWeight": 15,
+    "minAge": 5,
+    "administrations": 1,
+    "alerts": [
+      "Somministrare a stomaco vuoto (almeno 1 ora prima dei pasti)",
+      "Non indicato in gravidanza o allattamento",
+      "Ripetere la dose dopo 8–15 giorni se necessario",
+      "Trattare contemporaneamente tutti i contatti stretti",
+      "La dose calcolata è teorica: arrotondare alle compresse disponibili"
+    ],
+    "source": "WHO Patient Information Leaflet – Ivermectin; BNF/NICE – Scabies (2024)"
+  },
+  {
+    "id": "methotrexate_psoriasis",
+    "name": "Metotrexato",
+    "indication": "Psoriasi grave (per BSA) – AIFA / SIDeMaST",
+    "formulaType": "PER_BSA",
+    "dosePerUnit": 7.5,
+    "unit": "mg",
+    "minDose": 5.0,
+    "maxDose": 25.0,
+    "minAge": 18,
+    "administrations": 1,
+    "alerts": [
+      "Monitoraggio obbligatorio: emocromo, transaminasi, creatinina ogni 4 settimane",
+      "TERATOGENO: controindicato in gravidanza e allattamento",
+      "Supplementare con acido folico 5 mg/settimana il giorno successivo",
+      "Evitare FANS, penicilline, cotrimossazolo (riduzione clearance renale)",
+      "Non associare ad altri farmaci epatotossici"
+    ],
+    "source": "AIFA RCP Metotrexato (agg. 2023)"
+  },
+  {
+    "id": "cetirizine_urticaria",
+    "name": "Cetirizina",
+    "indication": "Orticaria cronica spontanea adulti – AIFA",
+    "formulaType": "FIXED",
+    "dosePerUnit": 10.0,
+    "unit": "mg",
+    "minDose": 5.0,
+    "maxDose": 10.0,
+    "minAge": 12,
+    "administrations": 1,
+    "alerts": [
+      "Può causare sonnolenza: evitare guida e utilizzo di macchinari",
+      "Ridurre a 5 mg/die in caso di insufficienza renale moderata",
+      "Evitare alcol durante la terapia",
+      "Non richiede monitoraggio di routine"
+    ],
+    "source": "AIFA RCP Cetirizina cloridrato 10 mg (agg. 2022)"
+  },
+  {
+    "id": "permethrin_scabies_ranges",
+    "name": "Permetrina 5%",
+    "indication": "Scabbia topica (fasce per peso) – BNF/NICE",
+    "formulaType": "WEIGHT_RANGES",
+    "dosePerUnit": 0,
+    "unit": "g",
+    "minAge": 0,
+    "administrations": 1,
+    "alerts": [
+      "Applicare su tutto il corpo dal collo in giù (incluse piante dei piedi)",
+      "In lattanti: applicare anche su cuoio capelluto e viso (evitare occhi/bocca)",
+      "Lasciare agire per 8–12 ore, poi risciacquare abbondantemente",
+      "Ripetere l'applicazione dopo 7 giorni",
+      "Lavare tutto il vestiario e biancheria a 60°C"
+    ],
+    "source": "BNF – Permethrin 5% cream; NICE CKS: Scabies (2024)",
+    "weightRanges": [
+      { "minKg": 0,  "maxKg": 15,  "dose": 7.5,  "unit": "g" },
+      { "minKg": 15, "maxKg": 30,  "dose": 15.0, "unit": "g" },
+      { "minKg": 30, "maxKg": 60,  "dose": 30.0, "unit": "g" },
+      { "minKg": 60, "maxKg": 999, "dose": 60.0, "unit": "g" }
+    ]
+  },
+  {
+    "id": "acitretin_psoriasis",
+    "name": "Acitretina",
+    "indication": "Psoriasi pustolosa/eritrodermica grave – AIFA",
+    "formulaType": "PER_KG",
+    "dosePerUnit": 0.5,
+    "unit": "mg",
+    "minDose": 10.0,
+    "maxDose": 50.0,
+    "minAge": 18,
+    "administrations": 1,
+    "alerts": [
+      "TERATOGENO di classe X: vietata la gravidanza durante e per 3 anni dopo il trattamento",
+      "Monitoraggio lipidi ed enzimi epatici ogni 4 settimane per i primi 6 mesi",
+      "Non associare a vitamina A supplementare o tetracicline",
+      "Secchezza cutanea, mucosale e congiuntivale molto frequenti: usare emollienti",
+      "Registrarsi obbligatoriamente nel programma di prevenzione gravidanza AIFA"
+    ],
+    "source": "AIFA RCP Acitretina (agg. 2023)"
+  },
+  {
+    "id": "isotretinoin_acne",
+    "name": "Roaccutan",
+    "indication": "Acne nodulo-cistica – Isotretinoina",
+    "formulaType": "PER_KG",
+    "dosePerUnit": 0.5,
+    "unit": "mg",
+    "minAge": 12,
+    "administrations": 2,
+    "alerts": [
+      "Teratogeno: obbligo di contraccezione e controllo medico stretto",
+      "Monitorare trigliceridi e funzionalità epatica",
+      "La dose massima riportata nella fonte è espressa come mg/kg/die: verificare sempre con il medico",
+      "Non associare a vitamina A o tetracicline"
+    ],
+    "source": "BNF / NICE / AIFA / RCP Roaccutan"
+    },
+    {
+    "id": "cyclosporine_psoriasis_atopic_dermatitis",
+    "name": "Sandimmun Neoral",
+    "indication": "Psoriasi grave / dermatite atopica – Ciclosporina",
+    "formulaType": "PER_KG",
+    "dosePerUnit": 2.5,
+    "unit": "mg",
+    "minAge": 18,
+    "administrations": 2,
+    "alerts": [
+      "Monitorare pressione arteriosa e funzionalità renale",
+      "Controindicato o da valutare attentamente in gravidanza",
+      "La dose massima riportata nella fonte è espressa come mg/kg/die: verificare sempre con il medico",
+      "Richiede monitoraggio clinico e laboratoristico regolare"
+    ],
+    "source": "AIFA / RCP Sandimmun Neoral / NICE"
+    },
+    {
+    "id": "amoxicillin_skin_infections",
+    "name": "Velamox",
+    "indication": "Infezioni batteriche cutanee – Amoxicillina",
+    "formulaType": "FIXED",
+    "dosePerUnit": 500.0,
+    "unit": "mg",
+    "maxDose": 3000.0,
+    "minAge": 18,
+    "administrations": 3,
+    "alerts": [
+      "Controindicato in caso di allergia alle penicilline",
+      "Valutare aggiustamento della dose in caso di insufficienza renale",
+      "Rispettare la durata della terapia prescritta"
+    ],
+    "source": "AIFA / RCP Velamox"
+    },
+    {
+    "id": "doxycycline_acne_skin_infections",
+    "name": "Bassado",
+    "indication": "Infezioni cutanee / acne – Doxiciclina",
+    "formulaType": "FIXED",
+    "dosePerUnit": 100.0,
+    "unit": "mg",
+    "maxDose": 100.0,
+    "minAge": 12,
+    "administrations": 1,
+    "alerts": [
+      "Controindicato in gravidanza",
+      "Controindicato nei bambini sotto i 12 anni",
+      "Fotosensibilizzante: evitare esposizione solare intensa",
+      "Assumere con abbondante acqua"
+    ],
+    "source": "BNF / AIFA / RCP Bassado"
+    },
+    {
+    "id": "azithromycin_skin_infections",
+    "name": "Zitromax",
+    "indication": "Infezioni batteriche della cute – Azitromicina",
+    "formulaType": "FIXED",
+    "dosePerUnit": 500.0,
+    "unit": "mg",
+    "maxDose": 500.0,
+    "minAge": 18,
+    "administrations": 1,
+    "alerts": [
+      "Attenzione in pazienti con patologie cardiache",
+      "Può prolungare l'intervallo QT",
+      "Valutare possibili interazioni farmacologiche"
+    ],
+    "source": "BNF / AIFA / RCP Zitromax"
+    },
+    {
+    "id": "fluconazole_skin_fungal_infections",
+    "name": "Diflucan",
+    "indication": "Infezioni fungine della cute – Fluconazolo",
+    "formulaType": "FIXED",
+    "dosePerUnit": 150.0,
+    "unit": "mg",
+    "maxDose": 150.0,
+    "minAge": 18,
+    "administrations": 1,
+    "alerts": [
+      "Attenzione alle interazioni farmacologiche",
+      "Monitorare la funzionalità epatica nei pazienti a rischio",
+      "Usare cautela in caso di patologie epatiche"
+    ],
+    "source": "BNF / AIFA / RCP Diflucan"
+    },
+    {
+    "id": "cefuroxime_skin_soft_tissue_ranges",
+    "name": "Zinnat",
+    "indication": "Infezioni batteriche cutanee e dei tessuti molli – Cefuroxima",
+    "formulaType": "WEIGHT_RANGES",
+    "dosePerUnit": 0,
+    "unit": "mg",
+    "maxDose": 250.0,
+    "minWeight": 4.0,
+    "administrations": 2,
+    "alerts": [
+      "Attenzione in caso di allergia a cefalosporine",
+      "Valutare possibile allergia crociata con penicilline",
+      "Aggiustare la dose in caso di insufficienza renale"
+    ],
+    "source": "AIFA / RCP Cefuroxima",
+    "weightRanges": [
+    { "minKg": 4.0, "maxKg": 6.0, "dose": 50.0, "unit": "mg" },
+    { "minKg": 6.0, "maxKg": 12.5, "dose": 100.0, "unit": "mg" },
+    { "minKg": 12.5, "maxKg": 25.0, "dose": 200.0, "unit": "mg" },
+    { "minKg": 25.0, "maxKg": 1000.0, "dose": 250.0, "unit": "mg" }
+    ]
+    },
+    {
+    "id": "cefixime_skin_infections_ranges",
+    "name": "Suprax",
+    "indication": "Infezioni batteriche della cute – Cefixima",
+    "formulaType": "WEIGHT_RANGES",
+    "dosePerUnit": 0,
+    "unit": "mg",
+    "maxDose": 400.0,
+    "minWeight": 10.0,
+    "administrations": 1,
+    "alerts": [
+      "Controindicato in caso di allergia alle cefalosporine",
+      "Valutare possibile allergia crociata con penicilline",
+      "Usare cautela in caso di insufficienza renale"
+    ],
+    "source": "AIFA / RCP Suprax",
+    "weightRanges": [
+    { "minKg": 10.0, "maxKg": 12.4, "dose": 80.0, "unit": "mg" },
+    { "minKg": 12.5, "maxKg": 14.9, "dose": 100.0, "unit": "mg" },
+    { "minKg": 15.0, "maxKg": 17.4, "dose": 120.0, "unit": "mg" },
+    { "minKg": 17.5, "maxKg": 19.9, "dose": 140.0, "unit": "mg" },
+    { "minKg": 20.0, "maxKg": 22.4, "dose": 160.0, "unit": "mg" },
+    { "minKg": 22.5, "maxKg": 24.9, "dose": 180.0, "unit": "mg" },
+    { "minKg": 25.0, "maxKg": 27.4, "dose": 200.0, "unit": "mg" },
+    { "minKg": 27.5, "maxKg": 29.9, "dose": 220.0, "unit": "mg" },
+    { "minKg": 30.0, "maxKg": 37.4, "dose": 240.0, "unit": "mg" },
+    { "minKg": 37.5, "maxKg": 999.0, "dose": 400.0, "unit": "mg" }
+    ]
+    }
+  ]
