@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.DrugDose" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.DrugDose1" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorOnPrimary">@color/color_on_primary</item>
         <item name="colorPrimaryVariant">@color/color_primary_dark</item>
@@ -18,7 +18,7 @@
         Ogni card nell'app usa questo stile → coerenza visiva garantita.
         Se voglio cambiare l'arrotondamento di tutte le card, lo cambio qui.
     -->
-    <style name="Widget.DrugDose.Card" parent="Widget.Material3.CardView.Filled">
+    <style name="Widget.DrugDose1.Card" parent="Widget.Material3.CardView.Filled">
         <item name="cardCornerRadius">@dimen/card_corner_radius</item>
         <item name="cardElevation">@dimen/card_elevation</item>
         <item name="cardBackgroundColor">@color/color_card_background</item>
@@ -27,7 +27,7 @@
         STILE BOTTONE PRIMARIO
         parent="Widget.Material3.Button" → bottone Material3 pieno (sfondo colorato)
     -->
-    <style name="Widget.DrugDose.Button.Primary" parent="Widget.Material3.Button">
+    <style name="Widget.DrugDose1.Button.Primary" parent="Widget.Material3.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_marginTop">@dimen/margin_medium</item>
@@ -36,7 +36,7 @@
         STILE BOTTONE SECONDARIO (contorno, senza sfondo colorato)
         parent="Widget.Material3.Button.OutlinedButton"
     -->
-    <style name="Widget.DrugDose.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+    <style name="Widget.DrugDose1.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_marginTop">@dimen/margin_small</item>
@@ -45,7 +45,7 @@
         STILE CAMPO DI INPUT (TextInputLayout)
         parent="Widget.Material3.TextInputLayout.OutlinedBox" → campo con bordo
     -->
-    <style name="Widget.DrugDose.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+    <style name="Widget.DrugDose1.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/margin_small</item>

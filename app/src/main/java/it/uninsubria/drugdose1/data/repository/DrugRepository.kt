@@ -19,7 +19,7 @@ class DrugRepository(private val context: Context){
         JsonLoader.loadDrugs(context)
 
     fun searchDrugs(query: String): List<Drug>{
-    if (query.isBlank()) return getDrugs() //query vuota restituiamo tutti i farmaci
+    if(query.isBlank()) return getDrugs() //query vuota restituiamo tutti i farmaci
         val lower= query.lowercase().trim() //normalizza la query
         return getDrugs().filter{ drug -> //tieni i drug che soddisfano la condizione
             drug.name.lowercase().contains(lower) //cerca nel nome
