@@ -1,5 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colori principali (light mode) -->
+    <color name="color_primary">#1565C0</color>
+    <color name="color_primary_dark">#003c8f</color>
+    <color name="color_secondary">#00897B</color>
+    <color name="color_on_primary">#FFFFFF</color>
+
+    <!-- Sfondi e superfici -->
+    <color name="color_background">#F5F7FA</color>
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_card_background">#FFFFFF</color>
+
+    <!-- Testi -->
+    <color name="color_on_surface">#212121</color>
+    <color name="color_text_secondary">#757575</color>
+
+    <!-- Separatori -->
+    <color name="color_divider">#E0E0E0</color>
+
+    <!-- Stato di errore e warning -->
+    <color name="color_error">#C62828</color>
+    <color name="color_warning">#E65100</color>
+    <color name="color_success">#2E7D32</color>
+
+    <!-- Colori dark mode (usati nel file values-night/themes.xml) -->
+    <color name="color_primary_night">#90CAF9</color>
+    <color name="color_secondary_night">#80CBC4</color>
+    <color name="color_background_night">#121212</color>
+    <color name="color_surface_night">#1E1E1E</color>
 </resources>

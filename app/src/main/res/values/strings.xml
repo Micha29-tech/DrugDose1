@@ -1,3 +1,55 @@
 <resources>
     <string name="app_name">DrugDose1</string>
+    <!-- ========== NAVIGAZIONE INFERIORE ========== -->
+    <string name="nav_drug_list">Farmaci</string>
+    <string name="nav_history">Cronologia</string>
+
+    <!-- ========== SCHERMATA LISTA FARMACI ========== -->
+    <string name="title_drug_list">Seleziona Farmaco</string>
+    <string name="hint_search">Cerca farmaco o indicazione...</string>
+
+    <!-- ========== SCHERMATA DETTAGLIO ========== -->
+    <string name="label_indication">Indicazione clinica</string>
+    <string name="label_formula">Formula di calcolo</string>
+    <string name="label_source">Fonte bibliografica</string>
+    <string name="btn_go_to_calculator">Calcola Dosaggio</string>
+
+    <!-- ========== SCHERMATA CALCOLATORE ========== -->
+    <string name="title_calculator">Calcola Dosaggio</string>
+    <!-- Hint nei campi di input — spiega all'utente cosa inserire -->
+    <string name="hint_weight">Peso paziente (kg) *</string>
+    <string name="hint_height">Altezza (cm) — obbligatoria per BSA</string>
+    <string name="hint_age">Età (anni)</string>
+    <string name="btn_calculate">Calcola Dose</string>
+    <string name="btn_save">Salva in Cronologia</string>
+    <string name="btn_reminder">Attiva Promemoria</string>
+    <!-- Etichette sezioni risultato -->
+    <string name="label_result">Risultato</string>
+    <string name="label_formula_used">Formula applicata</string>
+    <string name="label_alerts">⚠ Alert clinici</string>
+    <string name="label_source_ref">Fonte</string>
+    <!-- Messaggi di errore validazione input -->
+    <string name="error_weight_invalid">Inserisci un peso valido (es. 70 oppure 3.5)</string>
+    <string name="error_height_required">L\'altezza è obbligatoria per il calcolo BSA</string>
+
+    <!-- ========== SCHERMATA CRONOLOGIA ========== -->
+    <string name="title_history">Cronologia Calcoli</string>
+    <string name="btn_clear_history">Cancella tutto</string>
+    <!-- Testo mostrato quando la lista è vuota -->
+    <string name="empty_history">Nessun calcolo salvato.\nEsegui un calcolo e premi Salva.</string>
+    <string name="label_dose_calculated">Dose calcolata</string>
+    <!-- Dialog di conferma eliminazione -->
+    <string name="dialog_clear_title">Cancella cronologia</string>
+    <string name="dialog_clear_message">Sei sicuro? Tutti i calcoli salvati verranno eliminati definitivamente.</string>
+    <string name="dialog_cancel">Annulla</string>
+    <string name="dialog_confirm">Cancella</string>
+    <string name="toast_saved">Calcolo salvato in cronologia ✓</string>
+    <string name="toast_reminder_on">Promemoria attivato</string>
+    <string name="toast_deleted">Calcolo eliminato</string>
+    <!-- Istruzione swipe nella cronologia -->
+    <string name="hint_swipe_delete">Trascina un elemento per eliminarlo</string>
+    <!-- ========== SERVICE ========== -->
+    <!-- Canale notifiche obbligatorio da Android  -->
+    <string name="notification_channel_name">Promemoria Dosaggio</string>
+    <string name="notification_channel_desc">Notifiche per ricordare i dosaggi farmacologici calcolati</string>
 </resources>
