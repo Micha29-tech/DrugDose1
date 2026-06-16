@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout di una singola cella (item) della RecyclerView lista farmaci.
+    MaterialCardView: card con ombra e angoli arrotondati
+    android:clickable="true" e android:focusable="true":
+    Necessari per avere il feedback visivo.
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.DrugDose1.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_small"
+    android:clickable="true"
+    android:focusable="true">
+    <!--
+        Contenuto della card: LinearLayout verticale.
+        padding: spazio interno tra i bordi della card e il contenuto.
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_card">
+        <!-- Nome del farmaco: testo grande e blu per attirare l'attenzione -->
+        <TextView
+            android:id="@+id/tv_drug_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold"
+            android:textColor="@color/color_primary" />
+        <!-- Indicazione clinica: testo secondario -->
+        <TextView
+            android:id="@+id/tv_indication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:textSize="@dimen/text_size_body"
+            android:textColor="@color/color_on_surface" />
+        <!-- Tipo di formula: badge informativo piccolo -->
+        <TextView
+            android:id="@+id/tv_formula_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textSize="@dimen/text_size_caption"
+            android:textColor="@color/color_text_secondary" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
