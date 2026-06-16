@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- translate: muove la view sul piano X (orizzontale) -->
+    <!-- fromXDelta="100%": inizia fuori dallo schermo a destra (100% della larghezza) -->
+    <!-- toXDelta="0%": arriva al centro (posizione normale) -->
+    <!-- duration: durata dell'animazione in millisecondi -->
+    <!-- interpolator: curva di velocità (decelerate = inizia veloce e rallenta) -->
+    <translate
+        android:fromXDelta="100%"
+        android:toXDelta="0%"
+        android:duration="280"
+        android:interpolator="@android:interpolator/decelerate_cubic" />
+</set>

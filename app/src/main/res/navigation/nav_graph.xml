@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Questo file XML definisce:
+    1. Tutte le "destinazioni" (i Fragment che l'utente può vedere)
+    2. Le "azioni" (i percorsi di navigazione tra i Fragment)
+    3. Gli "argomenti" (i dati passati da un Fragment all'altro)
+    Il NavController usa questo grafo per navigare.
+    Il FragmentContainerView nell'activity_main.xml è il contenitore
+    in cui i Fragment vengono mostrati.
+    startDestination="@id/drugListFragment":
+    Il Fragment mostrato all'avvio dell'app.
+-->
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/drugListFragment">
+    <!--
+        DESTINAZIONE 1: Lista Farmaci
+        android:name: il nome completo della classe Fragment
+        android:label: titolo mostrato nella toolbar (se configurata)
+    -->
+    <fragment
+        android:id="@+id/drugListFragment"
+        android:name="it.uninsubria.drugdose1.ui.druglist.DrugListFragment"
+        android:label="@string/title_drug_list">
+        <!--
+            ACTION 1: da Lista → Dettaglio
+            android:id: identificatore dell'azione, usato nel Fragment con findNavController().navigate()
+            app:destination: Fragment di destinazione
+            app:enterAnim/exitAnim: animazioni di transizione (K18)
+        -->
+        <action
+            android:id="@+id/action_drugList_to_detail"
+            app:destination="@id/drugDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <!--
+        DESTINAZIONE 2: Dettaglio Farmaco
+        Riceve un argomento "drugId" dalla Lista Farmaci
+    -->
+    <fragment
+        android:id="@+id/drugDetailFragment"
+        android:name="it.uninsubria.drugdose1.ui.drugdetail.DrugDetailFragment"
+        android:label="@string/label_formula">
+        <!--
+            ARGOMENTO: drugId
+            Safe Args genera la classe DrugDetailFragmentArgs
+            con la proprietà "drugId: String" type-safe.
+            Senza Safe Args, passeremmo l'ID come Bundle con putString("drugId", id)
+            e recupereremmo con arguments?.getString("drugId") — più verboso e error-prone.
+        -->
+        <argument
+            android:name="drugId"
+            app:argType="string" />
+        <!-- ACTION 2: da Dettaglio → Calcolatore -->
+        <action
+            android:id="@+id/action_detail_to_calculator"
+            app:destination="@id/calculatorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <!-- DESTINAZIONE 3: Calcolatore (riceve drugId dal Dettaglio) -->
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="it.uninsubria.drugdose1.ui.calculator.CalculatorFragment"
+        android:label="@string/title_calculator">
+        <!-- Stesso argomento drugId — il Calcolatore sa quale farmaco calcolare -->
+        <argument
+            android:name="drugId"
+            app:argType="string" />
+    </fragment>
+    <!--
+        DESTINAZIONE 4: Cronologia
+        Raggiungibile dalla BottomNavigationView (non da una action)
+    -->
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="it.uninsubria.drugdose1.ui.history.HistoryFragment"
+        android:label="@string/title_history" />
+</navigation>
