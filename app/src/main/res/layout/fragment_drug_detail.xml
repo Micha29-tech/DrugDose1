@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_medium">
+
+        <!-- Card informazioni farmaco -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.DrugDose1.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_card">
+
+                <!-- Nome farmaco -->
+                <TextView
+                    android:id="@+id/tv_detail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_primary" />
+
+                <!-- Indicazione clinica -->
+                <TextView
+                    android:id="@+id/tv_detail_indication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textSize="@dimen/text_size_body"
+                    android:textColor="@color/color_on_surface" />
+
+                <!-- Separatore orizzontale -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/margin_medium"
+                    android:background="@color/color_divider" />
+
+                <!-- Etichetta "Formula di calcolo" -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_formula"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_subtitle"
+                    android:textColor="@color/color_on_surface" />
+
+                <!-- Dettagli formula -->
+                <TextView
+                    android:id="@+id/tv_detail_formula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_tiny"
+                    android:textSize="@dimen/text_size_body"
+                    android:lineSpacingMultiplier="1.4" />
+
+                <!-- Separatore -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/margin_medium"
+                    android:background="@color/color_divider" />
+
+                <!-- Etichetta "Fonte bibliografica" -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_source"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_subtitle"
+                    android:textColor="@color/color_on_surface" />
+
+                <!-- Fonte bibliografica -->
+                <TextView
+                    android:id="@+id/tv_detail_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_tiny"
+                    android:textSize="@dimen/text_size_caption"
+                    android:textColor="@color/color_text_secondary"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Bottone per andare al calcolatore -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_go_to_calculator"
+            style="@style/Widget.DrugDose1.Button.Primary"
+            android:text="@string/btn_go_to_calculator" />
+    </LinearLayout>
+</ScrollView>

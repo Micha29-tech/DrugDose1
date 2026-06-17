@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_background">
+
+    <!-- Bottone "Cancella tutto" in alto a destra -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_clear_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+
+        android:layout_margin="@dimen/margin_medium"
+        android:text="@string/btn_clear_history"
+        style="@style/Widget.Material3.Button.TextButton"/>
+
+    <!-- Testo "lista vuota" visibile solo quando non ci sono calcoli salvati -->
+    <TextView
+        android:id="@+id/tv_empty_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:gravity="center"
+        android:text="@string/empty_history"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/color_text_secondary"
+        android:visibility="gone" />
+
+    <!-- Lista cronologia -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/margin_medium" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_background">
+    <!--
+          android:iconifiedByDefault="false": mostra sempre il campo aperto
+              (invece di mostrare solo l'icona di ricerca da cliccare)
+          android:queryHint: testo grigio mostrato quando il campo è vuoto
+      -->
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/margin_medium"
+        android:queryHint="@string/hint_search"
+        android:iconifiedByDefault="false"
+        />
+    <!--
+    android:clipToPadding="false": il contenuto può scorrere sotto il padding
+    android:paddingBottom: spazio in fondo alla lista (evita che l'ultima
+        card venga coperta dalla BottomNavigationView)
+-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_drugs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+
+        android:paddingBottom="@dimen/margin_medium"/>
+</LinearLayout>
