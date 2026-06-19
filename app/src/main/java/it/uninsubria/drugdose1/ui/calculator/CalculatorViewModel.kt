@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import it.uninsubria.drugdose1.data.local.CalculationHistoryEntity
 import it.uninsubria.drugdose1.data.model.Drug
 import it.uninsubria.drugdose1.data.model.DoseResult
-import it.uninsubria.drugdose1.data.repository.DrugRepository
+import it.uninsubria.drugdose1.repository.DrugRepository
 import it.uninsubria.drugdose1.utils.DoseCalculator
 import  com.google.gson.Gson
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import it.uninsubria.drugdose1.data.model.Drug
-import it.uninsubria.drugdose1.data.repository.DrugRepository
+import it.uninsubria.drugdose1.repository.DrugRepository
 
 class DrugListViewModel (
     private val repository: DrugRepository

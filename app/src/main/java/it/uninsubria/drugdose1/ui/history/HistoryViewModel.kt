@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import it.uninsubria.drugdose1.data.local.CalculationHistoryEntity
-import it.uninsubria.drugdose1.data.repository.DrugRepository
+import it.uninsubria.drugdose1.repository.DrugRepository
 import kotlinx.coroutines.launch
 
 class HistoryViewModel(
