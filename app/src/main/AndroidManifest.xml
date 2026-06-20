@@ -16,6 +16,7 @@
             a runtime con requestPermissions() (lo fa il nostro CalculatorFragment)
     -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
@@ -40,7 +41,7 @@
 
         <service
             android:name=".service.DoseReminderService"
-            android:exported="false"/>
-
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
     </application>
 </manifest>
