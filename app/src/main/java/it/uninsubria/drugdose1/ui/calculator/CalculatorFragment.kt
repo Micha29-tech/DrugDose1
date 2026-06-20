@@ -22,6 +22,8 @@ import it.uninsubria.drugdose1.databinding.FragmentCalculatorBinding
 import it.uninsubria.drugdose1.service.DoseReminderService
 import kotlinx.coroutines.launch
 import androidx.navigation.fragment.findNavController
+import android.view.inputmethod.InputMethodManager
+import android.content.Context
 
 /**
  * Schermata principale dell'app — calcola il dosaggio
@@ -106,6 +108,7 @@ class CalculatorFragment : Fragment() {
     private fun setupButtons() {
         // Bottone CALCOLA
         binding.btnCalculate.setOnClickListener {
+            hideKeyboard()
             viewModel.onEvent(CalculatorUiEvent.CalculateClicked)
         }
         // Bottone SALVA IN CRONOLOGIA
@@ -117,6 +120,20 @@ class CalculatorFragment : Fragment() {
         binding.btnReminder.setOnClickListener {
             checkAndStartReminder()
         }
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager = requireContext()
+            .getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+        val currentView = requireActivity().currentFocus ?: binding.root
+
+        inputMethodManager.hideSoftInputFromWindow(
+            currentView.windowToken,
+            0
+        )
+
+        currentView.clearFocus()
     }
     /**
      * Controlla il permesso notifiche e avvia il Service.
@@ -144,7 +161,7 @@ class CalculatorFragment : Fragment() {
         }
     }
     /**
-     * Avvia il DoseReminderService come Foreground Service
+     * Avvia il DoseReminderService per mostrare notifica eliminabile
      */
     private fun launchDoseReminderService() {
         val state = viewModel.uiState.value
@@ -157,8 +174,8 @@ class CalculatorFragment : Fragment() {
             putExtra(DoseReminderService.EXTRA_DOSE, doseText)
             putExtra(DoseReminderService.EXTRA_UNIT, state.selectedDrug.unit)
         }
-        // Avvia il Foreground Service
-        requireContext().startForegroundService(intent)
+        // Avvia il Service normale per mostrare una notifica eliminabile
+        requireContext().startService(intent)
         Toast.makeText(requireContext(), getString(R.string.toast_reminder_on), Toast.LENGTH_SHORT).show()
     }
 

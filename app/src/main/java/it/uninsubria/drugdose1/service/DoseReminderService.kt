@@ -5,25 +5,16 @@ import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import it.uninsubria.drugdose1.R
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.core.content.ContextCompat
 
-/**
- *
- * PERCHÉ UN FOREGROUND SERVICE e non un Background Service?
- * i Background Service sono fortemente limitati:
- * - Il sistema può killarli dopo pochi secondi se l'app non è in primo piano
- * - Non possono fare molto senza interazione utente
- *
- * Un Foreground Service invece:
- * - Mostra UNA NOTIFICA PERSISTENTE all'utente (è sempre visibile)
- * - È "dichiarato" all'utente ->il sistema non lo killa arbitrariamente
- * - Può continuare a funzionare anche quando l'app è in background
- *
- * PERCHÉ ha senso clinicamente?
- * Un promemoria di dosaggio farmacologico DEVE essere visibile.
- * Il personale sanitario non può perdere un promemoria perché l'app
- * è finita in background. La notifica persistente garantisce visibilità.
- */
+
+
+
 class DoseReminderService : Service() {
 
     companion object {
@@ -67,25 +58,28 @@ class DoseReminderService : Service() {
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             // setOngoing(true): l'utente NON può swipare via questa notifica
             // È necessario per una notifica di promemoria medico importante
-            .setOngoing(true)
+            .setAutoCancel(true)
+            .setOngoing(false)
             .build()
 
-        // startForeground: registra il Service come Foreground e mostra la notifica
-        // NOTIFICATION_ID: identificatore della notifica (>0)
-        startForeground(NOTIFICATION_ID, notification)
+        // Avvia la notifica
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU ||
+            ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, notification)
+        }
 
-        // START_STICKY: se il sistema killa il Service per mancanza di memoria,
-        // lo riavvia automaticamente (con intent null)
-        return START_STICKY
+        stopSelf()
+
+        return START_NOT_STICKY
+
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
 
-    override fun onDestroy() {
-        // STOP_FOREGROUND_REMOVE = rimuovi la notifica quando il Service si ferma
-        stopForeground(STOP_FOREGROUND_REMOVE)
-        super.onDestroy()
-    }
 
     /**
      * Crea il canale di notifica (obbligatorio da API 26).
@@ -107,5 +101,6 @@ class DoseReminderService : Service() {
         // NotificationManager: gestisce le notifiche dell'app
         val manager = getSystemService(NotificationManager::class.java)
         manager.createNotificationChannel(channel)
+
     }
 }
