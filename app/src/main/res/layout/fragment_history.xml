@@ -6,6 +6,15 @@
     android:orientation="vertical"
     android:background="@color/color_background">
 
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/content_description_back_to_drugs"
+        android:padding="12dp"
+        android:src="@drawable/ic_arrow_back" />
+
     <!-- Bottone "Cancella tutto" in alto a destra -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_clear_history"

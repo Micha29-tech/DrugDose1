@@ -21,6 +21,7 @@ import it.uninsubria.drugdose1.R
 import it.uninsubria.drugdose1.databinding.FragmentCalculatorBinding
 import it.uninsubria.drugdose1.service.DoseReminderService
 import kotlinx.coroutines.launch
+import androidx.navigation.fragment.findNavController
 
 /**
  * Schermata principale dell'app — calcola il dosaggio
@@ -60,6 +61,11 @@ class CalculatorFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
         // Carica il farmaco nel ViewModel tramite l'ID ricevuto dagli argomenti
         val repository = (requireActivity().application as DrugDoseApplication).repository
         repository.getDrugById(args.drugId)?.let { drug ->

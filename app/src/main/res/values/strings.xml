@@ -52,4 +52,5 @@
     <!-- Canale notifiche obbligatorio da Android  -->
     <string name="notification_channel_name">Promemoria Dosaggio</string>
     <string name="notification_channel_desc">Notifiche per ricordare i dosaggi farmacologici calcolati</string>
+    <string name="content_description_back_to_drugs">Torna alla lista farmaci</string>
 </resources>

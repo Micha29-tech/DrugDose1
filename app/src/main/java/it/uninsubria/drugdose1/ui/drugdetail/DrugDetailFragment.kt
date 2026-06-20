@@ -30,6 +30,10 @@ class DrugDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btnBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
         // Recupera il Repository dall'Application
         val repository = (requireActivity().application as DrugDoseApplication).repository
 

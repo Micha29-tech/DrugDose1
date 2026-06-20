@@ -13,6 +13,8 @@ import it.uninsubria.drugdose1.DrugDoseApplication
 import it.uninsubria.drugdose1.R
 import it.uninsubria.drugdose1.databinding.FragmentHistoryBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import androidx.navigation.fragment.findNavController
+
 
 /**
  Mostra la cronologia dei calcoli salvati con possibilità di eliminazione
@@ -39,6 +41,10 @@ class HistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.drugListFragment)
+        }
 
         setupRecyclerView()
         setupSwipeToDelete()  // imposta il gesto di swipe per eliminare

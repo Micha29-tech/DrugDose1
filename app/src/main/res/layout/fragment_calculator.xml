@@ -10,6 +10,15 @@
         android:orientation="vertical"
         android:padding="@dimen/margin_medium">
 
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/content_description_back_to_drugs"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back" />
+
         <!-- Card farmaco selezionato (header della schermata) -->
         <com.google.android.material.card.MaterialCardView
             style="@style/Widget.DrugDose1.Card"
