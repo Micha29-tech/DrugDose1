@@ -7,7 +7,7 @@
         android:title="@string/nav_drug_list"/>
 
     <item
-        android:id="@+id/drugListFragment"
+        android:id="@+id/historyFragment"
         android:icon="@drawable/ic_history"
         android:title="@string/nav_history"/>
 
