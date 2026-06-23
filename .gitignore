@@ -8,21 +8,7 @@ build/
 local.properties
 
 # Android Studio / IntelliJ
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/usage.statistics.xml
-.idea/dictionaries/
-.idea/shelf/
-.idea/caches/
-.idea/libraries/
-.idea/modules.xml
-.idea/deploymentTargetSelector.xml
-.idea/compiler.xml
-.idea/gradle.xml
-.idea/AndroidProjectSystem.xml
-.idea/navEditor.xml
-.idea/assetWizardSettings.xml
-
+.idea/
 
 **/reports/
 **/problems-report.html
